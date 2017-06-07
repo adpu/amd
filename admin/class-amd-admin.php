@@ -51,7 +51,7 @@ class Amd_Admin {
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
-		add_action('add_meta_boxes_post', array( $this, 'amd_add_metaboxes'  ));
+		add_action('add_meta_boxes', array( $this, 'amd_add_metaboxes'  ));
 		add_action( 'save_post', array( $this, 'adpuamd_save_metadescription'));
 
 
