@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: Amd
- * Plugin URI: http://adpu.net
- * Description: This plugin add a meta description field inside post editor.
+ * Plugin URI: https://github.com/adpu/amd
+ * Description: Add meta description field inside post and page editor.
  * Version: 1.0.0
  * Author: Jordi Verdaguer
  * Author URI: http://adpu.net
@@ -21,8 +21,8 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Jordi Verdaguer
- * Plugin URI:        http://example.com/plugin-name-uri/
- * Description:       This plugin add a meta description field inisde post editor.
+ * Plugin URI:        https://github.com/adpu/amd
+ * Description:       Add meta description field inside post and page editor.
  * Version:           1.0.0
  * Author:            Jordi Verdaguer
  * Author URI:        http://adpu.net/
