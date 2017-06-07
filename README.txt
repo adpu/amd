@@ -12,7 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Amd is a simple wordpress plugin that add a meta description field iniside post editor of wordpress panel.
+Amd is a simple wordpress plugin that add a meta description field inside post editor of wordpress panel.
 
     Note that the `readme.txt` of the stable tag is the one that is considered the defining one for the plugin, so
 if the `/trunk/readme.txt` file says that the stable tag is `4.3`, then it is `/tags/4.3/readme.txt` that'll be used
