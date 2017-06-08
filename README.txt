@@ -18,9 +18,13 @@ Amd is a simple wordpress plugin that add meta description field inside post and
 1. Upload `amd` folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
+== Screenshots ==
 
+1. Screenshot of post editor panel with the meta description field. 
 
+== Changelog ==
 
-
+= 1.0 =
+First stable version
 
 
