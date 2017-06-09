@@ -1,16 +1,16 @@
 === Amd ===
 Contributors: adpu
 Donate link: http://adpu.net/
-Tags: meta description,custom field, custom fields, meta descriptions
+Tags: meta description,title tag,seo,custom field, custom fields, meta descriptions, meta title, metatitle,title
 Requires at least: 3.0.1
 Tested up to: 4.75
-Stable tag: trunk
+Stable tag: 1.01
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Amd is a simple wordpress plugin that add meta description field inside post and page editor. It has a character count tool that show if your text exceeds the limit of 160 characters (Optimal lenght).
+Amd is a simple wordpress plugin that add meta description and title tag fields inside post and page editor. This fields have a character count tool that show if your text exceeds the optimal lenght.
 
     
 == Installation ==
@@ -24,7 +24,15 @@ Amd is a simple wordpress plugin that add meta description field inside post and
 
 == Changelog ==
 
+= 1.01 =
+* Added title tag field
+
 = 1.0 =
-First stable version
+* First stable version
+
+== Upgrade Notice ==
+
+= 1.01 =
+We have added title tag field in post and page editor panel, it has a character count tool  and help links.
 
 
