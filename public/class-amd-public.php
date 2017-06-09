@@ -53,7 +53,8 @@ class Amd_Public {
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
-        add_action('wp_head', array( $this, 'adpuamd_add_metadescription'));
+		add_filter('document_title_parts',array( $this, 'adpuamd_write_add_metatitle'),10);
+        add_action('wp_head', array( $this, 'adpuamd_write_add_metadescription'));
 	}
 
 	/**
@@ -107,10 +108,18 @@ class Amd_Public {
 * @since    1.0.0
 * @param    string $text  value of metadescription
 */
-  public function adpuamd_add_metadescription() {
-	$text = get_post_meta( get_the_ID(), '_amd_metadescription', true );
-    if ( !empty($text) ) {
-    echo '<meta name="description" content="'.$text.'">';
+public function adpuamd_write_add_metatitle($title) {
+	$text_title = get_post_meta( get_the_ID(), '_amd_metatitle', true );
+    if ( !empty($text_title) ) {
+    $title['title']=$text_title;
+    }
+    return $title;
+    }
+  public function adpuamd_write_add_metadescription() {
+	$text_desc = get_post_meta( get_the_ID(), '_amd_metadescription', true );
+    if ( !empty($text_desc) ) {
+    echo '<meta name="description" content="'.$text_desc.'" />
+    ';
     }
     
     }

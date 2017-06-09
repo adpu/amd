@@ -52,7 +52,7 @@ class Amd_Admin {
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 		add_action('add_meta_boxes', array( $this, 'amd_add_metaboxes'  ));
-		add_action( 'save_post', array( $this, 'adpuamd_save_metadescription'));
+		add_action( 'save_post', array( $this, 'adpuamd_save_metatags'));
 
 
 	}
@@ -87,11 +87,19 @@ class Amd_Admin {
 * @since    1.0.0
 */
 public function amd_add_metaboxes() {
+	add_meta_box(
+    'amd-metatitle',
+    'Title tag',
+    array( $this, 'amd_print_metatitle_meta_box' )
+  );
   add_meta_box(
     'amd-metadescription',
     'Meta description',
     array( $this, 'amd_print_metadescription_meta_box' )
   );
+
+	
+  
 }
 
 
@@ -101,9 +109,14 @@ public function amd_add_metaboxes() {
 * @param    string $val  value of metadescription
 */
 
-public function amd_print_metadescription_meta_box() {
-  $val = get_post_meta( get_the_ID(), '_amd_metadescription', true ); 
-  include_once 'partials/amd_create_metabox.php';
+public function amd_print_metatitle_meta_box() {
+  $val_title = get_post_meta( get_the_ID(), '_amd_metatitle', true ); 
+  include_once 'partials/amd_create_metatitle_metabox.php';
+  
+  }
+  public function amd_print_metadescription_meta_box() {
+  $val_desc = get_post_meta( get_the_ID(), '_amd_metadescription', true ); 
+  include_once 'partials/amd_create_metadescription_metabox.php';
   
   }
 /**
@@ -112,7 +125,7 @@ public function amd_print_metadescription_meta_box() {
 */
 
 
-public function adpuamd_save_metadescription() {
+public function adpuamd_save_metatags() {
   
   if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
     return;
@@ -122,10 +135,15 @@ public function adpuamd_save_metadescription() {
   if ( ! isset( $_REQUEST['amd-metadescription'] ) ) {
     return;
   }
+   if ( ! isset( $_REQUEST['amd-metatitle'] ) ) {
+    return;
+  }
 
-  $texto = trim( sanitize_text_field( $_REQUEST['amd-metadescription'] ) );
+  $texto_desc = trim( sanitize_text_field( $_REQUEST['amd-metadescription'] ) );
+  $texto_title = trim( sanitize_text_field( $_REQUEST['amd-metatitle'] ) );
 
-  update_post_meta( get_the_ID(), '_amd_metadescription', $texto );
+  update_post_meta( get_the_ID(), '_amd_metatitle', $texto_title );
+  update_post_meta( get_the_ID(), '_amd_metadescription', $texto_desc );
 }
 	
 }

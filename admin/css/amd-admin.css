@@ -2,11 +2,11 @@
  * All of the CSS for your admin-specific functionality should be
  * included in this file.
  */
- #id_amd_metadescription{
- 	display: block;
+ #id_amd_metadescription,#id_amd_metatitle{
+    display: block;
     margin: 12px 0 0;
-    height: 4em;
     width: 100%;
  }
+ #id_amd_metadescription{height: 4em;}
  .red-color-amd{color:red}
  .green-color-amd{color:green}
