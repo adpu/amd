@@ -1,7 +1,7 @@
 === Amd ===
 Contributors: adpu
 Donate link: http://adpu.net/
-Tags: meta description,title tag,seo,custom field, custom fields, meta descriptions, meta title, metatitle,title
+Tags: meta description,meta title,title tag,scan meta tags,manage meta content,test meta tags,test meta description,scan meta description,scan meta title,test meta title 
 Requires at least: 3.0.1
 Tested up to: 4.75
 Stable tag: 1.03
