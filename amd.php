@@ -3,7 +3,7 @@
  * Plugin Name: Amd
  * Plugin URI: https://github.com/adpu/amd
  * Description: Add meta description field inside post and page editor.
- * Version: 1.02
+ * Version: 1.03
  * Author: Jordi Verdaguer
  * Author URI: http://adpu.net
  * Requires at least: 4.0
@@ -23,7 +23,7 @@
  * Plugin Name:       Jordi Verdaguer
  * Plugin URI:        https://github.com/adpu/amd
  * Description:       Add meta description field inside post and page editor.
- * Version:           1.1
+ * Version:           1.03
  * Author:            Jordi Verdaguer
  * Author URI:        http://adpu.net/
  * License:           GPL-2.0+
