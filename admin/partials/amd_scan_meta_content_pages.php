@@ -5,7 +5,6 @@
  * @link       http://adpu.net
  * @since      1.0.0
  */
-
 ?>
 <div class="amd_title_tags_facts">
     <h2 class="amd_title_facts">Meta title facts</h2>
@@ -85,4 +84,5 @@
 <?php }?>
 <?php if($current_page < $total_numpages){ ;?>
 <a href="?page=scan-meta-tags&tab=pages&current_page=<?php echo $current_page+1;?>" class="amd_nav_next">Next pages</a>
-<?php }?>
+<?php 
+}

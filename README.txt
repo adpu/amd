@@ -4,7 +4,7 @@ Donate link: https://www.paypal.me/jverdaguer
 Tags: meta description,meta title,title tag,scan meta tags,manage meta content,test meta tags,test meta description,scan meta description,scan meta title,test meta title 
 Requires at least: 3.0.1
 Tested up to: 4.75
-Stable tag: 1.03
+Stable tag: 1.04
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +30,9 @@ Major features of Amd include:
 2. Screenshot of "Scan Meta tags tool". 
 
 == Changelog ==
+
+= 1.04 =
+* Fixed error  "Headers already sent" when activate after deactivate.
 
 = 1.03 =
 * Added a new feature called "Scan Meta tags tool" inside Settings menu.

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The file that defines the core plugin class
  *
@@ -35,7 +34,7 @@ class Amd {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Plugin_Name_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Amd_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -69,7 +68,7 @@ class Amd {
 	public function __construct() {
 
 		$this->plugin_name = 'amd';
-		$this->version = '1.0.0';
+		$this->version = '1.0.4';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -83,10 +82,10 @@ class Amd {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Plugin_Name_Loader. Orchestrates the hooks of the plugin.
-	 * - Plugin_Name_i18n. Defines internationalization functionality.
-	 * - Plugin_Name_Admin. Defines all hooks for the admin area.
-	 * - Plugin_Name_Public. Defines all hooks for the public side of the site.
+	 * - Amd_Loader. Orchestrates the hooks of the plugin.
+	 * - Amd_i18n. Defines internationalization functionality.
+	 * - Amd_Admin. Defines all hooks for the admin area.
+	 * - Amd_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.

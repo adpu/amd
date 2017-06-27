@@ -5,7 +5,6 @@
  * @link       http://adpu.net
  * @since      1.0.0
  */
-
 ?>
 <label class="screen-reader-text" for="amd-metatitle">Title tag</label><input type="text" name="amd-metatitle" id="id_amd_metatitle" value="<?php
       echo esc_attr( $val_title );

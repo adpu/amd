@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The admin-specific functionality of the plugin.
  *
@@ -241,19 +240,22 @@ public function amd_save_metatags() {
   }
 
  
-  if ( ! isset( $_REQUEST['amd-metadescription'] ) ) {
+  if ( isset( $_REQUEST['amd-metadescription'] ) ) {
+    $amd_metadescription=$_REQUEST['amd-metadescription'];
+  }else{
     return;
   }
-   if ( ! isset( $_REQUEST['amd-metatitle'] ) ) {
+   if ( isset( $_REQUEST['amd-metatitle'] ) ) {
+    $amd_metatitle=$_REQUEST['amd-metatitle'];
+    }else{
     return;
   }
 
-  $texto_desc = trim( sanitize_text_field( $_REQUEST['amd-metadescription'] ) );
-  $texto_title = trim( sanitize_text_field( $_REQUEST['amd-metatitle'] ) );
+  $texto_desc = trim( sanitize_text_field( $amd_metadescription ) );
+  $texto_title = trim( sanitize_text_field( $amd_metatitle ) );
 
   update_post_meta( get_the_ID(), '_amd_metatitle', $texto_title );
   update_post_meta( get_the_ID(), '_amd_metadescription', $texto_desc );
 }
 	
 }
-

@@ -5,7 +5,6 @@
  * @link       http://adpu.net
  * @since      1.0.0
  */
-
 ?>
 <div class="wrap">
 	<h1>Scan Meta tags.</h1>
@@ -25,10 +24,4 @@
         } else {
             include_once 'amd_scan_meta_content_pages.php';
         } // end if/else
-         
-       
-         
-    ?>
-
-
-</div><!--.wrap-->
+?></div><!--.wrap-->

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Fired during plugin activation
  *
@@ -32,5 +31,4 @@ class Amd_Activator {
 	public static function activate() {
 
 	}
-
 }

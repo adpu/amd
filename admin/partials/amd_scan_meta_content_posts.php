@@ -5,7 +5,6 @@
  * @link       http://adpu.net
  * @since      1.0.0
  */
-
 ?>
     <div class="amd_title_tags_facts">
     <h2 class="amd_title_facts">Meta title facts</h2>
@@ -77,7 +76,6 @@
 		<th scope="col" id="title" class="manage-column column-metatitle"><strong>Title</strong></th><th scope="col" id="metatitle" class="manage-column column-metatitle"><strong>Meta title</strong><br>(Optimal 60 characters)</th><th scope="col" id="metadescription" class="manage-column column-metadescription"><strong>Meta description</strong><br>(Optimal 160 characters)</th>
 	</tr>
 	</tfoot>
-
 </table>
 <br>
 <p class="amd_num_pages">Page <strong><?php echo $current_page;?></strong> of <strong><?php echo $total_numposts;?></strong></p>
@@ -86,4 +84,5 @@
 <?php }?>
 <?php if($current_page < $total_numposts){ ;?>
 <a href="?page=scan-meta-tags&tab=posts&current_page=<?php echo $current_page+1;?>" class="amd_nav_next">Next posts</a>
-<?php }?>
+<?php 
+}
