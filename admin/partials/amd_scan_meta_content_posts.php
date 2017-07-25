@@ -8,10 +8,10 @@
 ?>
     <div class="amd_title_tags_facts">
     <h2 class="amd_title_facts">Meta title facts</h2>
-    <span class="amd_margin-right"><span class="amd_badge amd_background_color_red"><?php echo  $amd_title_tag_empty;?></span> No content </span><span class="amd_margin-right"><span class="amd_badge amd_background_color_orange"><?php echo $amd_title_tag_lenght_exceed;?></span>  Exceeds optimal length </span><span class="amd_badge amd_background_color_green"><?php echo $amd_title_tag_lenght_optimal;?></span> Optimal lenght</div>
+    <span class="amd_margin-right"><span class="amd_badge amd_background_color_red"><?php echo  $amd_title_tag_empty;?></span> No content </span><span class="amd_margin-right"><span class="amd_badge amd_background_color_orange"><?php echo $amd_title_tag_lenght_exceed;?></span>  Exceeds optimal length </span><span class="amd_margin-right"><span class="amd_badge amd_background_color_green"><?php echo $amd_title_tag_lenght_optimal;?></span> Optimal lenght </span><span class="amd_badge amd_background_color_grey"><?php echo $amd_title_tag_duplicated;?></span> Duplicate content</div>
     <div class="amd_meta_description_facts">
     <h2 class="amd_title_facts">Meta description facts</h2>
-    <span class="amd_margin-right"><span class="amd_badge amd_background_color_red"><?php echo  $amd_meta_description_empty;?></span> No content </span><span class="amd_margin-right"><span class="amd_badge amd_background_color_orange"><?php echo $amd_meta_description_lenght_exceed;?></span>  Exceeds optimal length </span><span class="amd_badge amd_background_color_green"><?php echo $amd_meta_description_lenght_optimal;?></span> Optimal lenght</div>
+    <span class="amd_margin-right"><span class="amd_badge amd_background_color_red"><?php echo  $amd_meta_description_empty;?></span> No content </span><span class="amd_margin-right"><span class="amd_badge amd_background_color_orange"><?php echo $amd_meta_description_lenght_exceed;?></span>  Exceeds optimal length </span><span class="amd_margin-right"><span class="amd_badge amd_background_color_green"><?php echo $amd_meta_description_lenght_optimal;?></span> Optimal lenght</span><span class="amd_badge amd_background_color_grey"><?php echo $amd_meta_description_duplicated;?></span> Duplicate content</div>
     <table class="table-amdadpu-list-post-pages wp-list-table widefat fixed striped ">
 	<thead>
 	<tr>

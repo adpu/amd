@@ -163,6 +163,9 @@ public function amd_scan_menu_options($type) {
   $amd_title_tag_lenght_exceed=$wpdb->get_var( "SELECT COUNT(*) FROM $wpdb->postmeta as postmeta JOIN $wpdb->posts as posts ON postmeta.post_id = posts.id WHERE  postmeta.meta_key='_amd_metatitle' AND char_length(postmeta.meta_value) > 60 AND posts.post_type ='post' AND posts.post_status ='publish' ");
   /* Title tag with less of 60 characters */
   $amd_title_tag_lenght_optimal=($count_posts->publish)-$amd_title_tag_lenght_exceed-$amd_title_tag_empty;
+  /* Duplicate title tags */
+  $amd_title_tag_no_duplicated=$wpdb->get_var( "SELECT COUNT(distinct meta_value) FROM $wpdb->postmeta as postmeta JOIN $wpdb->posts as posts  ON postmeta.post_id = posts.id WHERE postmeta.meta_key='_amd_metatitle' AND postmeta.meta_value != '' AND posts.post_type ='post' AND posts.post_status ='publish' ");
+  $amd_title_tag_duplicated=$amd_title_tag_filled - $amd_title_tag_no_duplicated;
 
   /* Meta description */
   /* Meta description filled */
@@ -174,6 +177,10 @@ public function amd_scan_menu_options($type) {
   /* Meta description with less of 160 characters */
   $amd_meta_description_lenght_optimal=($count_posts->publish)-$amd_meta_description_lenght_exceed-$amd_meta_description_empty;
 
+/* Duplicate meta description */
+  $amd_meta_description_no_duplicated=$wpdb->get_var( "SELECT COUNT(distinct meta_value) FROM $wpdb->postmeta as postmeta JOIN $wpdb->posts as posts  ON postmeta.post_id = posts.id WHERE postmeta.meta_key='_amd_metadescription' AND postmeta.meta_value != '' AND posts.post_type ='post' AND posts.post_status ='publish' ");
+  $amd_meta_description_duplicated=$amd_meta_description_filled - $amd_meta_description_no_duplicated;
+
 /* *** PAGES ** */
   /* Title tag */
   /* Title tag filled */
@@ -184,6 +191,9 @@ public function amd_scan_menu_options($type) {
   $amd_page_title_tag_lenght_exceed=$wpdb->get_var( "SELECT COUNT(*) FROM $wpdb->postmeta as postmeta JOIN $wpdb->posts as posts ON postmeta.post_id = posts.id WHERE  postmeta.meta_key='_amd_metatitle' AND char_length(postmeta.meta_value) > 60 AND posts.post_type ='page' AND posts.post_status ='publish' ");
   /* Title tag with less of 60 characters */
   $amd_page_title_tag_lenght_optimal=($count_pages->publish)-$amd_page_title_tag_lenght_exceed-$amd_page_title_tag_empty;
+  /* Duplicate title tags */
+  $amd_page_title_tag_no_duplicated=$wpdb->get_var( "SELECT COUNT(distinct meta_value) FROM $wpdb->postmeta as postmeta JOIN $wpdb->posts as posts  ON postmeta.post_id = posts.id WHERE postmeta.meta_key='_amd_metatitle' AND postmeta.meta_value != '' AND posts.post_type ='page' AND posts.post_status ='publish' ");
+  $amd_page_title_tag_duplicated=$amd_page_title_tag_filled - $amd_page_title_tag_no_duplicated;
 
   /* Meta description */
   /* Meta description filled */
@@ -194,6 +204,10 @@ public function amd_scan_menu_options($type) {
   $amd_page_meta_description_lenght_exceed=$wpdb->get_var( "SELECT COUNT(*) FROM $wpdb->postmeta as postmeta JOIN $wpdb->posts as posts  ON postmeta.post_id = posts.id WHERE  postmeta.meta_key='_amd_metadescription' AND char_length(postmeta.meta_value) > 160 AND posts.post_type ='page' AND posts.post_status ='publish' ");
   /* Meta description with less of 160 characters */
   $amd_page_meta_description_lenght_optimal=($count_pages->publish)-$amd_page_meta_description_lenght_exceed-$amd_page_meta_description_empty;
+
+  /* Duplicate meta description */
+  $amd_page_meta_description_no_duplicated=$wpdb->get_var( "SELECT COUNT(distinct meta_value) FROM $wpdb->postmeta as postmeta JOIN $wpdb->posts as posts  ON postmeta.post_id = posts.id WHERE postmeta.meta_key='_amd_metadescription' AND postmeta.meta_value != '' AND posts.post_type ='page' AND posts.post_status ='publish' ");
+  $amd_page_meta_description_duplicated=$amd_page_meta_description_filled - $amd_page_meta_description_no_duplicated;
 
   
   /* ceil Returns the next highest integer value by rounding up value */
